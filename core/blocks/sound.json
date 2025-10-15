@@ -1,0 +1,11 @@
+{
+  "category": "sound",
+  "blocks": [
+    {
+      "id": "play_sound",
+      "name": "play sound [pop]",
+      "type": "command",
+      "action": "new Audio(`sounds/${value}.mp3`).play()"
+    }
+  ]
+}

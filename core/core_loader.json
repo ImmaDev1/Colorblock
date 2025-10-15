@@ -1,0 +1,23 @@
+{
+  "name": "Colorblock Core Engine",
+  "version": "1.0.0",
+  "author": "Ilocano Technology Foundation",
+  "language": "JavaScript",
+  "modules": {
+    "interpreter": "core/infrastructure/interpreter.js",
+    "blocks": "core/interpretation/blocks.js"
+  },
+  "extensions": [
+    "fetch",
+    "cookies",
+    "music",
+    "tts",
+    "pen",
+    "website",
+    "ai"
+  ],
+  "runtime": {
+    "asyncDelay": 200,
+    "logging": true
+  }
+}

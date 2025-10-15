@@ -1,0 +1,33 @@
+{
+  "category": "control",
+  "blocks": [
+    {
+      "id": "when_start",
+      "name": "when run started",
+      "type": "event"
+    },
+    {
+      "id": "repeat",
+      "name": "repeat [10]",
+      "type": "loop",
+      "action": "for (let i=0;i<value;i++){await core.run(block.children)}"
+    },
+    {
+      "id": "forever",
+      "name": "forever this",
+      "type": "loop",
+      "action": "while(true){await core.run(block.children)}"
+    },
+    {
+      "id": "wait",
+      "name": "wait [1] seconds",
+      "type": "command",
+      "action": "await core.sleep(value * 1000)"
+    },
+    {
+      "id": "end",
+      "name": "end",
+      "type": "end"
+    }
+  ]
+}

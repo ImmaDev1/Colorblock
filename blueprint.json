@@ -1,0 +1,66 @@
+{
+  "name": "Colorblock",
+  "version": "1.0.0",
+  "language": "Ilocano",
+  "description": "Ilocano visual programming platform inspired by Blockly, Scratch, and MIT App Inventor.",
+  
+  "author": {
+    "organization": "Ilocano Technology Foundation",
+    "maintainers": ["Lacktoast"],
+    "country": "Philippines"
+  },
+
+  "engine": {
+    "core": "core/interpreter.js",
+    "renderer": "core/renderer.js",
+    "runtime": "core/runtime.js",
+    "language": "core/language.js"
+  },
+
+  "defaultBlocks": {
+    "control": "blocks/control.json",
+    "motion": "blocks/motion.json",
+    "pen": "blocks/pen.json",
+    "sound": "blocks/sound.json",
+    "ai": "blocks/ai.json"
+  },
+
+  "extensions": {
+    "turtle": "extensions/turtle.js",
+    "tts": "extensions/tts.js",
+    "fetch": "extensions/fetchdata.js",
+    "cookies": "extensions/cookies.js",
+    "music": "extensions/music.js",
+    "website": "extensions/website.js"
+  },
+
+  "website": {
+    "homepage": "website/index.html",
+    "docs": "website/docs.html",
+    "demo": "website/demo.html"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImmaDev1/colorblock"
+  },
+
+  "deployment": {
+    "vercel": {
+      "enabled": true,
+      "rootDir": "website/",
+      "domain": "colorblock.vercel.app"
+    }
+  },
+
+  "license": "Apache 2.0",
+  "compatibility": {
+    "browsers": ["Chrome", "Firefox", "Edge", "Safari"],
+    "os": ["Windows", "Linux", "macOS", "Android", "iOS"]
+  },
+
+  "localization": {
+    "supported": ["ilocano", "filipino", "english"],
+    "default": "ilocano"
+  }
+}

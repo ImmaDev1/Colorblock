@@ -1,0 +1,8 @@
+{
+  "category": "pen",
+  "blocks": [
+    { "id": "pen_down", "name": "pen down", "type": "command", "action": "ctx.pen = true" },
+    { "id": "pen_up", "name": "pen up", "type": "command", "action": "ctx.pen = false" },
+    { "id": "set_pen_color", "name": "set pen color to [#0000ff]", "type": "command", "action": "ctx.penColor = value" }
+  ]
+}

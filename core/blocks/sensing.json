@@ -1,0 +1,17 @@
+{
+  "category": "sensing",
+  "blocks": [
+    {
+      "id": "ask_and_wait",
+      "name": "ask [What's your name?] and wait",
+      "type": "command",
+      "action": "ctx.answer = prompt(value)"
+    },
+    {
+      "id": "answer",
+      "name": "answer",
+      "type": "variable",
+      "getter": "return ctx.answer"
+    }
+  ]
+}

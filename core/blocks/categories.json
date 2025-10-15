@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "id": "motion",
+      "name": "Motion",
+      "color": "#4C97FF",
+      "file": "blocks/motion.json"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "color": "#FFAB19",
+      "file": "blocks/control.json"
+    },
+    {
+      "id": "looks",
+      "name": "Looks",
+      "color": "#9966FF",
+      "file": "blocks/looks.json"
+    },
+    {
+      "id": "sound",
+      "name": "Sound",
+      "color": "#CF63CF",
+      "file": "blocks/sound.json"
+    },
+    {
+      "id": "pen",
+      "name": "Pen",
+      "color": "#0FBD8C",
+      "file": "blocks/pen.json"
+    },
+    {
+      "id": "sensing",
+      "name": "Sensing",
+      "color": "#5CB1D6",
+      "file": "blocks/sensing.json"
+    }
+  ]
+}

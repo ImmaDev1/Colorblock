@@ -1,0 +1,17 @@
+{
+  "category": "looks",
+  "blocks": [
+    {
+      "id": "say",
+      "name": "say [Hello!]",
+      "type": "command",
+      "action": "console.log('💬', value)"
+    },
+    {
+      "id": "change_color",
+      "name": "change color to [blue]",
+      "type": "command",
+      "action": "ctx.color = value"
+    }
+  ]
+}

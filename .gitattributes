@@ -1,0 +1,36 @@
+# Normalize line endings
+* text=auto
+
+# JavaScript, JSON, HTML, CSS use LF
+*.js text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+
+# Lua files
+*.lua text eol=lf
+/lua/** linguist-language=Lua
+
+# Markdown files
+*.md text
+
+# Prevent Git from treating binary files as text
+*.png binary
+*.jpg binary
+*.gif binary
+*.svg text
+
+# Custom settings for Colorblock
+/core/** linguist-language=JavaScript
+/blocks/** linguist-language=JSON
+/website/** linguist-language=HTML
+/lua/** linguist-language=Lua
+
+# Optional: mark important folders as non-vendor
+core/ vendor=false
+blocks/ vendor=false
+website/ vendor=false
+lua/ vendor=false
+
+# Handle shell scripts properly
+*.sh text eol=lf

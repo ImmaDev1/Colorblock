@@ -3,7 +3,7 @@
   "name": "colorblock",
   "builds": [
     {
-      "src": "website/index.html",
+      "src": "web/index.html",
       "use": "@vercel/static"
     }
   ],

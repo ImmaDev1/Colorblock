@@ -11,7 +11,7 @@
   },
 
   "engine": {
-    "core": "core/interpreter.js",
+    "core": "core/infrastructure/interpreter.js",
     "renderer": "core/renderer.js",
     "runtime": "core/runtime.js",
     "language": "core/language.js"

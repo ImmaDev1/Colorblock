@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "colorblock",
+  "builds": [
+    {
+      "src": "website/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/website/index.html" }
+  ],
+  "framework": null,
+  "public": true
+}

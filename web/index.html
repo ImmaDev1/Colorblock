@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorblock Inline Demo</title>
+<style>
+body {
+  background: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+#output {
+  border: 2px solid #0078ff;
+  border-radius: 8px;
+  background: white;
+}
+textarea {
+  width: 300px;
+  height: 200px;
+  font-family: monospace;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 6px;
+}
+button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>🎨 Colorblock Inline Demo</h1>
+<p>Type simple commands below to move the turtle:</p>
+
+<textarea id="code" placeholder="when run started
+move 50
+turn 90
+move 50
+end"></textarea><br>
+<button id="run">Run</button>
+
+<canvas id="output" width="400" height="400"></canvas>
+
+<script>
+document.getElementById("run").addEventListener("click", () => {
+  const code = document.getElementById("code").value.trim().split("\n");
+  const ctx = document.getElementById("output").getContext("2d");
+  let x = 200, y = 200, angle = 0;
+
+  const runtime = {
+    move: n => {
+      const rad = angle * Math.PI / 180;
+      const newX = x + n * Math.cos(rad);
+      const newY = y + n * Math.sin(rad);
+      ctx.lineTo(newX, newY);
+      x = newX; y = newY;
+    },
+    turn: deg => { angle += deg; },
+  };
+
+  const blueprint = {
+    run: []
+  };
+
+  ctx.clearRect(0, 0, 400, 400);
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.strokeStyle = "#0078ff";
+  ctx.lineWidth = 2;
+
+  for (let line of code) {
+    line = line.trim().toLowerCase();
+    if (line.startsWith("move")) {
+      const n = parseInt(line.split(" ")[1]) || 10;
+      runtime.move(n);
+      blueprint.run.push({ action: "move", value: n });
+    } else if (line.startsWith("turn")) {
+      const n = parseInt(line.split(" ")[1]) || 90;
+      runtime.turn(n);
+      blueprint.run.push({ action: "turn", value: n });
+    }
+  }
+
+  ctx.stroke();
+  console.log("Colorblock JSON Blueprint:", JSON.stringify(blueprint, null, 2));
+});
+</script>
+
+</body>
+</html>
